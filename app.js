@@ -6,9 +6,17 @@ app.use(express.static("public"));
 app.set("view engine", "ejs");
 
 
-app.get("/", function(req, res){
+app.get("/home", function(req, res){
   res.render("home");
-})
+});
+
+app.get("/contact", function(req, res){
+  res.render("contact");
+});
+
+app.get("/samples", function(req, res){
+  res.render("samples");
+});
 
 
 
