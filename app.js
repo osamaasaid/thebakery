@@ -1,22 +1,22 @@
 console.log("app working");
 //Requirements
-var express = require("express");
-var app = express();
+const express = require("express");
+const app = express();
 
 //set view engine
 app.use(express.static("public"));
 app.set("view engine", "ejs");
 
 //Routes
-app.get("/home", function(req, res){
+app.get("/home", (req, res) => {
   res.render("home");
 });
 
-app.get("/contact", function(req, res){
+app.get("/contact", (req, res) => {
   res.render("contact");
 });
 
-app.get("/samples", function(req, res){
+app.get("/samples", (req, res) => {
   res.render("samples");
 });
 
